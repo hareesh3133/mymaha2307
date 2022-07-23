@@ -3,7 +3,7 @@
   become: yes
   gather_facts: yes
   tasks:
-  - name:  install java on ubuntu nodes
+  - name: install java on ubuntu nodes
     apt:
      name: "{{myjavapackonubuntu}}"
      state: present
