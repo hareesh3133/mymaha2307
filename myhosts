@@ -1,3 +1,9 @@
 [mywebservers]
 172.31.32.24
 172.31.39.12
+
+
+
+[mywebservers:vars]
+mywebserverpackonubuntu = apache22222
+mywebserverpackonredhat = httpd

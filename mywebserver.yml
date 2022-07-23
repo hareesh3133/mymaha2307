@@ -6,25 +6,25 @@
 
   - name: i want to install apache2 webserver on ansible nodes
     apt:
-     name: apache2
+     name: "{{mywebserverpackonubuntu}}"
      state: present
     when: ansible_os_family== "Debian"
 
   - name: i want to start webserver
     service:
-      name: apache2
+      name: "{{mywebserverpackonubuntu}}"
       state: started
     when: ansible_os_family== "Debian"
 
   
   - name: i want to install Redhat on ansible nodes
     apt:
-     name: httpd
+     name: "{{mywebserverpackonredhat}}"
      state: present
     when: ansible_os_family== "RedHat"
 
   - name: i want to start webserver
     service:
-      name: httpd
+      name: "{{mywebserverpackonredhat}}"
       state: started
     when: ansible_os_family== "RedHat"  
