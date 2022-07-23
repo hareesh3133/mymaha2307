@@ -4,7 +4,7 @@
   gather_facts: yes
   tasks:
   
-  - name: i want to install RedHat webserver on ansible nodes
+  - name: i want to install Redhat on ansible nodes
     apt:
      name: httpd
      state: present
