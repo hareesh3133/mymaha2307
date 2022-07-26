@@ -1,0 +1,9 @@
+---
+- hosts: 172.31.32.24
+  become: yes
+  tasks:
+  - name: install git
+    apt:
+     name: git
+     state: present
+    tags: mygit
