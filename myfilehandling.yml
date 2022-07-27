@@ -2,7 +2,8 @@
 - hosts: 172.31.32.24
   become: yes
   tasks: 
-  - name: create file
-    file:
-      path: /home/ubuntu/mytestfile
-      state: touch 
+  - include_tasks: myfile.yml
+  - name: copy static files into ansible nodes
+    copy:
+      src: mytestfile
+      dest: /home/ubuntu/mystaticfile
