@@ -1,2 +1,8 @@
 ---
 # tasks file for mytomrole
+
+
+- include_tasks: myadduser.yml
+- include_tasks: installjava.yml
+- includu_tasks: download.yml
+- include_tasks: permission.yml
