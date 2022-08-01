@@ -1,3 +1,4 @@
+
 - name: grant tomcat ownership on tomcat folder
   execute: sudo chown -R tomcat:tomcat /opt/tomcat/
 
