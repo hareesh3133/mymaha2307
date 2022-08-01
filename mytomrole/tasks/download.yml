@@ -1,9 +1,9 @@
 ---
-- name: download tomcat tar file
+- name: dowmload tomcat tarfile
   get_url:
-      url: https://fossies.org/linux/www/apache-tomcat-10.0.23.tar.gz
-      dest: /home/ubuntu/apache-tomcat-10.0.23.tar.gz
-      force_basic_auth: yes
+    url: https://fossies.org/linux/www/apache-tomcat-10.0.23.tar.gz
+    dest: /home/ubuntu/apache-tomcat-10.0.23.tar.gz
+    force_basic_auth: yes
 
 
 - name: create tomcat folder
@@ -11,7 +11,7 @@
     path: /opt/tomcat
     state: directory
 
-- name: extrat tar file
+- name: extract tarfile
   command:
-     cmd: sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
+     cmd: sudo tar xzvf /home/ubuntuapache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
      creates: /opt/tomcat/LICENSE
